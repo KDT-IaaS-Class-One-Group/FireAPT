@@ -30,10 +30,18 @@
   <script>
     const root = document.getElementById('root');
     const btn = document.getElementById('button');
+    console.dir(root);
     // 버튼 클릭 이벤트리스너
     btn.addEventListener('click', function(event) {
       // 버튼 삭제
       event.target.remove();
+      // 동적으로 CSS 만들기
+      // #root
+      root.style.backgroundColor = 'aqua';
+      // #root > div:nth-child(1)
+      root.children[1].style.width = '80vw';
+      root.children[1].style.height = '80vh';
+      root.children[1].style.backgroundColor = 'gray';
     })
   </script>
 </body>
