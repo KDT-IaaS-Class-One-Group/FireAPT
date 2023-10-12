@@ -49,6 +49,17 @@
       root.children[1].style.height = '10vw'
       root.children[1].style.backgroundColor = 'antiquewhite'
     });
+
+    // div 박스 생성
+    let divBox = document.createElement("div");
+    root.children[0].appendChild(divBox);
+    divBox.style.width = "100px";
+    divBox.style.height = "100px";
+    divBox.style.backgroundColor = "yellow";
+    for (let i = 0; i < divBox < 10; i++) {
+      console.log(divBox);
+      };
+
   </script>
 </body>
 </html>
