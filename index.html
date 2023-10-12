@@ -18,6 +18,11 @@
     align-items: center;
     justify-content: center;
   }
+  .window {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+  }
 </style>
 <body>
   <div id="root">
@@ -31,6 +36,16 @@
     const root = document.getElementById('root');
     const btn = document.getElementById('button');
     console.dir(root);
+
+    // 빌딩 안에 창문 div 생성
+    const building = document.getElementById('building');
+    let html = "";
+    let createDiv = document.createElement('div');
+    for(i = 0; i < 20; i++) {
+      html += `<div class = window></div>`
+    } 
+    building.innerHTML = html;
+    
     // 버튼 클릭 이벤트리스너
     btn.addEventListener('click', function(event) {
       // 버튼 삭제
@@ -49,6 +64,7 @@
       root.children[1].style.height = '10vw'
       root.children[1].style.backgroundColor = 'antiquewhite'
     });
+
   </script>
 </body>
 </html>
