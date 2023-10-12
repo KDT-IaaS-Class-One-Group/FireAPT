@@ -60,24 +60,27 @@
       divBox.style.height = "100px";
       divBox.style.backgroundColor = "yellow";
 
-      function timer() {
-        let stop = setInterval(function () {
-          timeValue = timeValue - 1;
-          time.value = timeValue;
-          if (timeValue <= 0) {
-            clearInterval(stop);
-          }
-        }, 1000);
-      }
       let hander = true;
+      let count = 1;
+      // function timer() {
+      //   let stop = setInterval(function () {
+      //     timeValue = timeValue - 1;
+      //     time.value = timeValue;
+      //     if (timeValue <= 0) {
+      //       clearInterval(stop);
+      //     }
+      //   }, 1000);
+      // }
 
-      root.addEventListener("click", () => {});
-      divBox.addEventListener("click", () => {
-        divBox.remove();
-        if (hander === true) {
-          score.value = count++;
-        }
-      });
+      root.addEventListener(
+        "click",
+        () => {
+          if (hander === true) {
+            score.value = count++;
+          }
+        },
+        500
+      );
     </script>
   </body>
 </html>
