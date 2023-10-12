@@ -30,8 +30,10 @@
   <script>
     const root = document.getElementById('root');
     const btn = document.getElementById('button');
+    // 버튼 클릭 이벤트리스너
     btn.addEventListener('click', function(event) {
-      
+      // 버튼 삭제
+      event.target.remove();
     })
   </script>
 </body>
