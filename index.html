@@ -35,21 +35,22 @@
   <script>
     const root = document.getElementById('root');
     const btn = document.getElementById('button');
-    console.dir(root);
-
-    // 빌딩 안에 창문 div 생성
-    const building = document.getElementById('building');
-    let html = "";
-    let createDiv = document.createElement('div');
-    for(i = 0; i < 20; i++) {
-      html += `<div class = window></div>`
-    } 
-    building.innerHTML = html;
+    
     
     // 버튼 클릭 이벤트리스너
+    let box = document.getElementsByClassName('window');
     btn.addEventListener('click', function(event) {
       // 버튼 삭제
       event.target.remove();
+      // 빌딩 안에 창문 div 생성
+      const building = document.getElementById('building');
+      let html = "";
+      let createDiv = document.createElement('div');
+      for(i = 0; i < 20; i++) {
+        html += `<div class = window></div>`
+      } 
+      building.innerHTML = html;
+
       // 동적으로 CSS 만들기
       // #root
       root.style.backgroundColor = 'aqua';
@@ -60,9 +61,9 @@
       root.children[0].style.height = '80vh';
       root.children[0].style.backgroundColor = 'gray';
       // #root > div:nth-child(2)
-      root.children[1].style.width = '100vw'
-      root.children[1].style.height = '10vw'
-      root.children[1].style.backgroundColor = 'antiquewhite'
+      root.children[1].style.width = '100vw';
+      root.children[1].style.height = '10vw';
+      root.children[1].style.backgroundColor = 'antiquewhite';
     });
 
   </script>
