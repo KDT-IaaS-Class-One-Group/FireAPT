@@ -35,52 +35,26 @@
   </head>
   <body>
     <div id="root">
+      <button id = "button">게임 시작!</button>
       <!-- 건물 레이아웃 -->
-      <div>
-        <div></div>
-      </div>
+      <div></div>
       <!-- 바닥 레이아웃 -->
-      <div>
-        <input type="text" value="0" id="score" />
-        <input type="text" value="10" id="time" />
-      </div>
+      <div></div>
     </div>
     <script>
-      const root = document.getElementById("root");
-      const score = document.getElementById("score");
-      const time = document.getElementById("time");
 
-      // let divBox;
-      // for (let i = 0; i < 10; i++) {
-      divBox = document.createElement("div");
+      // div 박스 생성
+      const root = document.getElementById(root);
+      let divBox = document.createElement("div");
       root.children[0].appendChild(divBox);
-      // }
-      // 날려먹지 말기.
       divBox.style.width = "100px";
       divBox.style.height = "100px";
       divBox.style.backgroundColor = "yellow";
+      for (let i = 0; i < divBox < 10; i++) {
+        console.log(divBox);
+      }
 
-      let hander = true;
-      let count = 1;
-      // function timer() {
-      //   let stop = setInterval(function () {
-      //     timeValue = timeValue - 1;
-      //     time.value = timeValue;
-      //     if (timeValue <= 0) {
-      //       clearInterval(stop);
-      //     }
-      //   }, 1000);
-      // }
 
-      root.addEventListener(
-        "click",
-        () => {
-          if (hander === true) {
-            score.value = count++;
-          }
-        },
-        500
-      );
     </script>
   </body>
 </html>
