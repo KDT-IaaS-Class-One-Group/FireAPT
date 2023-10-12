@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+  }
+  #root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+<body>
+  <div id="root">
+    <button id = "button">게임 시작!</button>
+    <!-- 건물 레이아웃 -->
+    <div id ="building"></div>
+    <!-- 바닥 레이아웃 -->
+    <div id = "floor"></div>
+  </div>
+  <script>
+    const root = document.getElementById('root');
+    const btn = document.getElementById('button');
+    console.dir(root);
+    // 버튼 클릭 이벤트리스너
+    btn.addEventListener('click', function(event) {
+      // 버튼 삭제
+      event.target.remove();
+      // 동적으로 CSS 만들기
+      // #root
+      root.style.backgroundColor = 'aqua';
+      root.style.justifyContent = 'flex-end';
+      root.style.flexDirection = 'column';
+      // #root > div:nth-child(1)
+      root.children[0].style.width = '80vw';
+      root.children[0].style.height = '80vh';
+      root.children[0].style.backgroundColor = 'gray';
+      // #root > div:nth-child(2)
+      root.children[1].style.width = '100vw'
+      root.children[1].style.height = '10vw'
+      root.children[1].style.backgroundColor = 'antiquewhite'
+    });
+  </script>
+</body>
+</html>
