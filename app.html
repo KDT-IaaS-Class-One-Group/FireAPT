@@ -41,14 +41,18 @@
       <div></div>
     </div>
     <script>
-      const root = document.getElementById(root);
+      let root = document.getElementById("root");
       let divBox = document.createElement("div");
-      root.children[0].appendChild(divBox);
+      let a = root.children[0].appendChild(divBox);
+      console.dir(divBox);
+
+      for (let i = 0; i < 20; i++) {
       divBox.style.width = "100px";
       divBox.style.height = "100px";
       divBox.style.backgroundColor = "yellow";
-      for (let i = 0; i < divBox < 10; i++) {
-        console.log(divBox);
+      divBox.style.display = "flex"
+      divBox.style.display = "nowrap"
+        console.dir(i);
       }
     </script>
   </body>
