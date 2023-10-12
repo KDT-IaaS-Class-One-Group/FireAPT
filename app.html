@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,3 +10,63 @@
   
 </body>
 </html>
+=======
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 : JungYoungSick</title>
+    <style>
+      *{margin: 0; padding: 0; box-sizing: border-box;}
+      #root{
+        width: 100vw;
+        height: 100vh;
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+      }
+      /* 바닥 레이아웃 */
+      #root>div:nth-child(1) {
+        width: 80vw;
+        height: 80vh;
+        background-color: gray;
+      }
+      /* 건물 레이아웃 */
+      #root>div:nth-child(2) {
+        width: 100vw;
+        height: 10vh;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- 건물 레이아웃 -->
+      <div></div>
+      <!-- 바닥 레이아웃 -->
+      <div></div>
+      
+    </div>
+    <script>
+      const root = document.getElementById(root)
+      let divBox = document.createElement("div")
+      root.children[0].appendChild(divBox)
+      divBox.style.width = "100px";
+      divBox.style.height = "100px";
+      divBox.style.backgroundColor = "yellow"
+      for(let i=0; i<divBox<10; i++) {
+        console.log(divBox)
+      }
+
+
+
+
+
+
+    </script>
+  </body>
+  </html>
+  
+>>>>>>> jung
